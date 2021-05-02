@@ -42,7 +42,7 @@
 
 @keyframes city {
     from {
-        background-position: -1000px 100%, 0 0;
+        background-position: -720px 100%, 0 0;
     }
     to {
         background-position: 0 100%;
