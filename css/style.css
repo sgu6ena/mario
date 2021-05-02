@@ -1,15 +1,18 @@
 .container {
-    background: url(../img/back.png);
+    background: url(../img/back.png) repeat-x 0 100%;
     background-size: contain;
+    background-position: bottom;
     height: 400px;
+    width: 100%;
     position: relative;
+    animation: city 30s linear infinite;
 }
 
 .img-wrapper {
     transform: scale(.2);
-    position: absolute;
+    position: fixed;
     top: 100px;
-    animation: space 1s 6 ease-in-out;
+    animation: space 1s 6 ease-out;
     animation-delay: 1s;
     animation-direction: alternate;
 }
@@ -20,19 +23,34 @@
         left: 0px;
     }
     25% {
-        top: 70px;
-        left: 30px;
+        top: 80px;
+        left: 10px;
     }
     50% {
         top: 40px;
-        left: 60px;
+        left: 50px;
     }
     75% {
-        top: 70px;
+        top: 80px;
         left: 90px;
     }
     100% {
         top: 100px;
-        left: 120px;
+        left: 100px;
+    }
+}
+
+@keyframes city {
+    from {
+        background-position: -1000px 100%, 0 0;
+    }
+    to {
+        background-position: 0 100%;
+    }
+}
+
+@media(max-width:740px) {
+    .container {
+        background-size: cover;
     }
 }
