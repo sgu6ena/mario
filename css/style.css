@@ -1,0 +1,38 @@
+.container {
+    background: url(../img/back.png);
+    background-size: contain;
+    height: 400px;
+    position: relative;
+}
+
+.img-wrapper {
+    transform: scale(.2);
+    position: absolute;
+    top: 100px;
+    animation: space 1s 6 ease-in-out;
+    animation-delay: 1s;
+    animation-direction: alternate;
+}
+
+@keyframes space {
+    0% {
+        top: 100px;
+        left: 0px;
+    }
+    25% {
+        top: 70px;
+        left: 30px;
+    }
+    50% {
+        top: 40px;
+        left: 60px;
+    }
+    75% {
+        top: 70px;
+        left: 90px;
+    }
+    100% {
+        top: 100px;
+        left: 120px;
+    }
+}
