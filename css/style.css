@@ -5,38 +5,65 @@
     height: 400px;
     width: 100%;
     position: relative;
-    animation: city 30s linear infinite;
+    animation: city 10s linear infinite;
 }
 
-.img-wrapper {
-    transform: scale(.2);
+.img-wrapper-mario {
+    position: fixed;
+    top: 240px;
+    animation: space 5s ease-out infinite;
+    animation-delay: 2s;
+    animation-direction: normal;
+}
+
+.img-wrapper-tube {
+    position: fixed;
+    top: 180px;
+    left: 250px;
+}
+
+.img-wrapper-mushroom {
+    position: fixed;
+    top: 280px;
+    left: 400px;
+    animation: mushroom 4s infinite ease-in-out alternate-reverse;
+}
+
+.tube-2 {
+    left: 715px;
+}
+
+.img-wrapper-star {
     position: fixed;
     top: 100px;
-    animation: space 1s 6 ease-out;
-    animation-delay: 1s;
-    animation-direction: alternate;
+    left: 780px;
+    animation: star .8s infinite ease-in-out alternate-reverse;
 }
 
 @keyframes space {
     0% {
-        top: 100px;
-        left: 0px;
+        transform: translateY(0px);
     }
-    25% {
-        top: 80px;
-        left: 10px;
+    10% {
+        transform: translateY(-100px);
     }
-    50% {
-        top: 40px;
-        left: 50px;
+    20% {
+        transform: translateY(0px);
+    }
+    30% {
+        transform: translateY(-100px);
+    }
+    40% {
+        transform: translateY(0px);
+    }
+    60% {
+        transform: translateX(200px) translateY(-200px);
     }
     75% {
-        top: 80px;
-        left: 90px;
+        transform: translateX(300px) translateY(-100px);
     }
     100% {
-        top: 100px;
-        left: 100px;
+        transform: translateX(300px) translateY(0);
     }
 }
 
@@ -46,6 +73,24 @@
     }
     to {
         background-position: 0 100%;
+    }
+}
+
+@keyframes mushroom {
+    from {
+        transform: translateX(000px);
+    }
+    to {
+        transform: translateX(300px);
+    }
+}
+
+@keyframes star {
+    from {
+        transform: translateY(000px);
+    }
+    to {
+        transform: translateY(15px);
     }
 }
 
